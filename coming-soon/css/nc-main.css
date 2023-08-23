@@ -1018,12 +1018,12 @@ hr.hr-1 {
 .contact-section-1 .contact-boxes-1 { margin-bottom: 40px; }
 
 .outer-wrp.flex-cc {
-	animation: glower 7s cubic-bezier(0.95, 0.05, 0.795, 0.035) 1s infinite alternate;
+	animation: glower 9s cubic-bezier(0.95, 0.05, 0.795, 0.035) infinite alternate;
 }
 
 @keyframes glower {
-	0% { backdrop-filter: saturate(1.5) brightness(1) contrast(1); }
-	70%, 100% { backdrop-filter: saturate(.5) brightness(1.2) contrast(1.5); }
+	0%, 5% { backdrop-filter: saturate(1.2) brightness(.9) contrast(2); }
+	70%, 100% { backdrop-filter: saturate(1) brightness(.8) contrast(1); }
 }
 
 .main-text {

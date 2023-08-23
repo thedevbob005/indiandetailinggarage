@@ -14,7 +14,7 @@
                     </h2>
                     <div class="dsn-icon-heading-color dsn-def-btn d-flex justify-content-center mt-30">
                         <a class="dsn-btn dsn-border border-color-default  background-section  effect-ajax has-icon-left"
-                           href="contact.html" data-dsn-text="START A PROJECT">
+                           href="/contact" data-dsn-text="START A PROJECT">
                         <span class="dsn-icon dsn-bg-before btn-icon-left heading-color z-index-1">
                             <i class="fas fa-angle-right" aria-hidden="true"></i>
                         </span>
@@ -30,9 +30,9 @@
                                 <div class="main-logo">
                                     <a href="index.html" data-dsn-text="IndianDetailingGarage"
                                        class="custom-logo-link main-brand effect-ajax" rel="home">
-                                        <img class="custom-logo logo-light" src="assets/img/logo-light.png"
+                                        <img class="custom-logo logo-light" src="/assets/img/logo-light.png"
                                              alt="IndianDetailingGarage"/>
-                                        <img class="custom-logo logo-dark" src="assets/img/logo.png"
+                                        <img class="custom-logo logo-dark" src="/assets/img/logo.png"
                                              alt="IndianDetailingGarage"/>
                                     </a>
                                 </div>
@@ -63,19 +63,19 @@
                             <div class="menu-footer-menu-container">
                                 <ul id="menu-footer-menu" class="menu">
                                     <li class="menu-item">
-                                        <a href="home.html" class="effect-ajax">HOME</a>
+                                        <a href="/about-us" class="effect-ajax">ABOUT US</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="work-classic-2.html" class="effect-ajax">PORTFOLIO</a>
+                                        <a href="/services" class="effect-ajax">SERVICES</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="stories.html" class="effect-ajax">NEWS</a>
+                                        <a href="/blog" class="effect-ajax">BLOG</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="about-us.html" class="effect-ajax">ABOUT</a>
+                                        <a href="/terms-and-conditions" class="effect-ajax">TERMS &amp; CONDITIONS</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="contact.html" class="effect-ajax">CONTACT</a>
+                                        <a href="/privacy-policy" class="effect-ajax">PRIVACY POLICY</a>
                                     </li>
 
                                 </ul>
@@ -88,7 +88,7 @@
 
                             <div class="col-contact">
                                 <p><strong>T</strong> : +91 12345 12345</p>
-                                <p class="mt-10"><strong>F</strong> :+91 12345 12345</p>
+                                <p class="mt-10"><strong>F</strong> : +91 12345 12345</p>
                                 <p class="over-hidden mt-10">
                                     <strong>E</strong> : <a class="link-hover" href="#"
                                                             data-hover-text="info@indiandetailinggarage.com">info@indiandetailinggarage.com</a>

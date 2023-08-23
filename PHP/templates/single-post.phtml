@@ -6,13 +6,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="assets/img/logo-32x32.png" sizes="32x32"/>
-    <link rel="icon" href="assets/img/logo-192x192.png" sizes="192x192"/>
+    <link rel="icon" href="/assets/img/logo-32x32.png" sizes="32x32"/>
+    <link rel="icon" href="/assets/img/logo-192x192.png" sizes="192x192"/>
 
-    <title>Stories | Indian Detailing Garage</title>
+    <title><?= $blog['title'] ?> | Indian Detailing Garage</title>
 
-    <link href="assets/css/plugins.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="/assets/css/plugins.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 
@@ -24,26 +24,26 @@
     <div class="dsnload p-absolute">
         <span class="dsnload__row">
             <span class="dsnload__img">
-            <img src="assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
-            <img src="assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+            <img src="/assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+            <img src="/assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
             </span>
         </span>
         <span class="dsnload__row dsnload__row--sibling">
             <span class="dsnload__img">
-                 <img src="assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
-            <img src="assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+                 <img src="/assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+            <img src="/assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
             </span>
         </span>
         <span class="dsnload__row dsnload__row--sibling">
             <span class="dsnload__img">
-                <img src="assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
-            <img src="assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+                <img src="/assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+            <img src="/assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
             </span>
         </span>
         <span class="dsnload__row dsnload__row--sibling">
             <span class="dsnload__img">
-               <img src="assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
-            <img src="assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+               <img src="/assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+            <img src="/assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
             </span>
         </span>
 
@@ -77,6 +77,48 @@
 
 <?php include('common/header.php'); ?>
 
+<header id="dsn_header" class="dsn-header-animation  dsn-full-header v-dark-head">
+        <div class="entry-header p-relative over-hidden">
+            <div id="hero_image"
+                 class="p-absolute dsn-hero-parallax-img over-hidden before-z-index z-index-1 full-width"
+                 data-dsn-ajax="img" data-overlay="6">
+                <img src="/uploads/<?= $blog['poster'] ?>"
+                     class="cover-bg-img transform-3d " alt=""
+                     data-dsn-position="50% 50%"
+                     sizes="(max-width: 2560px) 100vw, 2560px"/>
+            </div>
+            <div id="hero_content" class="d-flex p-relative h-100 dsn-hero-parallax-title align-items-end container">
+                <div class="content p-relative ">
+                    <div class="intro-project w-100">
+                        <div class="intro-title ">
+                            <!-- <div id="dsn_metas" class="p-relative d-flex justify-content-between ">
+                                <div class="metas has-separate p-relative mb-10">
+                                    <span>Creative</span>
+                                    <span>Photography</span>
+                                </div>
+                            </div> -->
+                            <div id="hero_title">
+                                <h1 class="title text-upper" data-dsn-ajax="title"><?= $blog['title'] ?></h1>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <a href="#page_wrapper" rel="nofollow" class="dsn-scroll-bottom"
+           data-dsn-option='{"ease": "power4.inOut" , "duration" : 1.5}'>
+            <div class="text">SCROLL</div>
+        </a>
+    </header>
+    <!-- ========== End Header  ========== -->
+
     <div id="page_wrapper" class="wrapper">
 
         <div class="root-blog">
@@ -88,67 +130,24 @@
                         <div class="news-content-inner">
 
                             <div class="post-content">
-                                <p>
-                                    <a href="#">As a leading UX design agency,</a>
-                                    we’re often asked by prospective clients and fellow designers similar questions:
-                                    Disrupt is an experience to showcase the agency's approach to growing brands by
-                                    building tech. Featured in an FWA Insights article, our team elaborates on the
-                                    motivation behind the creation of this site.
-                                </p>
+                                
+                                <?= $blog['content'] ?>
 
-                                <blockquote class="wp-block-quote">
-                                    <p>
-                                        <strong>
-                                            <em>
-                                                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-                                                auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                                                Curabitulandit Sed posuere
-                                                consectetur est at lobortis. Donec id elit non mi porta gravida at eget
-                                                metus.
-                                            </em>
-                                        </strong>
-                                    </p>
-                                </blockquote>
-
-                                <p>
-                                    <a href="#">As a leading UX design agency,</a>
-                                    we’re often asked by prospective clients and fellow designers similar questions:
-                                    Disrupt is an experience to showcase the agency's approach to growing brands by
-                                    building tech. Featured in an FWA Insights article, our team elaborates on the
-                                    motivation behind the creation of this site.
-                                </p>
-
-                                <img class="w-100" src="assets/img/blog/1.jpg" alt="">
-
-                                <p>
-                                    <a href="#">As a leading UX design agency,</a> we’re often asked
-                                    by prospective clients and fellow designers similar questions: Disrupt
-                                    is an
-                                    experience
-                                    to showcase
-                                    the
-                                    agency's approach to growing brands by building tech. Featured in an FWA
-                                    Insights
-                                    article, our team
-                                    elaborates on the motivation behind the creation of this site.
-                                </p>
-
-                                <div class="post-tags p-relative">
-                                    <a class="fz-16"
-                                       href="#">
-                                        <span class="post_tag post_tag">Blog</span>
-                                    </a>
-                                    <a class="fz-16" href="#">
-                                        <span class="post_tag post_tag">Creative</span>
-                                    </a>
+                                <div class="post-tags p-relative pb-20">
+                                    <?php
+                                    $tags = explode(',', $blog['tags']);
+                                    foreach ($tags as $tag) {
+                                        echo '<a class="fz-16" href="#"><span class="post_tag post_tag">' . $tag . '</span></a>';
+                                    }
+                                    ?>
                                 </div>
 
                             </div>
 
                             <div class="pagination-post d-flex align-items-center border-style border-radius mt-section">
 
-                                <div class="pagination-item w-100 p-20"><a
-                                        href="https://index.html2022/06/11/create-the-bestworkplace/"><span
+                                <!-- <div class="pagination-item w-100 p-20"><a
+                                        href="/blog/demo"><span
                                         class="mb-5">PREVIOUS</span><h4 class="title-block word-wrap">Create the
                                     bestworkplace</h4></a></div>
 
@@ -158,12 +157,12 @@
                                     </a>
                                 </div>
                                 <div class="pagination-item w-100 p-20 text-right"><a
-                                        href="https://index.html2022/06/11/soul-artwork-from-lizzy/"><span
+                                        href="/blog/demo"><span
                                         class="mb-5">NEXT</span><h4 class="title-block word-wrap">Soul Artwork from
-                                    Lizzy</h4></a></div>
+                                    Lizzy</h4></a></div> -->
                             </div>
 
-                            <div class="comments-post section-margin">
+                            <!-- <div class="comments-post section-margin">
                                 <div class="comments-area section-margin">
                                     <div class="comments-title">
                                         <h4 class="title-block line-shap line-shap-before">
@@ -175,7 +174,7 @@
                                         <li class="comment">
                                             <div class="comment-body">
                                                 <div class="comment-author">
-                                                    <img alt="" src="assets/img/team/1.jpg">
+                                                    <img alt="" src="/assets/img/team/1.jpg">
                                                 </div>
                                                 <div class="comment-text">
 
@@ -206,7 +205,7 @@
                                                 <li class="comment">
                                                     <div class="comment-body">
                                                         <div class="comment-author">
-                                                            <img alt="" src="assets/img/team/1.jpg">
+                                                            <img alt="" src="/assets/img/team/1.jpg">
                                                         </div>
                                                         <div class="comment-text">
                                                             <div class="comment-info">
@@ -238,7 +237,7 @@
                                         <li class="comment">
                                             <div class="comment-body">
                                                 <div class="comment-author">
-                                                    <img alt="" src="assets/img/team/1.jpg">
+                                                    <img alt="" src="/assets/img/team/1.jpg">
                                                 </div>
                                                 <div class="comment-text">
                                                     <div class="comment-info">
@@ -319,7 +318,7 @@
                                 </div>
 
 
-                            </div>
+                            </div> -->
 
 
                         </div>
@@ -348,10 +347,10 @@
 <div id="line_head"><span class="container"></span></div>
 <!-- ========== End Line BG ========== -->
 
-<script src="assets/js/jquery-3.1.1.min.js"></script>
-<script src="assets/js/plugins.min.js"></script>
-<script src="assets/js/plugins/dsn-grid.min.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="/assets/js/jquery-3.1.1.min.js"></script>
+<script src="/assets/js/plugins.min.js"></script>
+<script src="/assets/js/plugins/dsn-grid.min.js"></script>
+<script src="/assets/js/custom.js"></script>
 
 </body>
 

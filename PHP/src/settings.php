@@ -19,7 +19,7 @@ return [
         // Database settings
         "dbase" => [
             "host" => "localhost",
-            "dbname" => "test",
+            "dbname" => "idgdb",
             "user" => "root",
             "pass" => ""
         ],

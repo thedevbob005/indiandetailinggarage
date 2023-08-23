@@ -1,28 +1,29 @@
+
     <!-- ========== Menu ========== -->
     <header id="site_menu_header" class="site-header  dsn-container d-none dsn-hamburger">
         <div class="main-logo">
-            <a href="index.html" data-dsn-text="IndianDetailingGarage" class="custom-logo-link main-brand effect-ajax" rel="home"
+            <a href="/" data-dsn-text="IndianDetailingGarage" class="custom-logo-link main-brand effect-ajax" rel="home"
                aria-current="page">
-                <img src="assets/img/logo-light.png" class="custom-logo logo-light" alt="IndianDetailingGarage"/>
-                <img src="assets/img/logo.png" class="custom-logo logo-dark" alt="IndianDetailingGarage"/>
+                <img src="/assets/img/logo-light.png" class="custom-logo logo-light" alt="IndianDetailingGarage"/>
+                <img src="/assets/img/logo.png" class="custom-logo logo-dark" alt="IndianDetailingGarage"/>
             </a>
         </div>
         <nav class="main-navigation ">
             <div class="menu-cover-title header-container dsn-container">MENU</div>
             <ul id="dsn-primary-list" class="primary-nav h2">
                 <li class="nav-item ">
-                    <a title="Home" href="index.html">
+                    <a title="Home" href="/">
                         <span class="overflow">Home</span>
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a title="About" href="about-us.html">
+                    <a title="About" href="/about-us">
                         <span class="overflow">About</span>
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a title="Service" href="service.html">
-                        <span class="overflow">Service</span>
+                    <a title="Services" href="/services">
+                        <span class="overflow">Services</span>
                     </a>
                 </li>
                 <li class="nav-item has-sub-menu">
@@ -46,12 +47,12 @@
                                 </span>
                         </li>
                         <li class="nav-item ">
-                            <a title="Detailing" href="work.html" data-dsn-text="Detailing">
+                            <a title="Detailing" href="/accessories/detailing" data-dsn-text="Detailing">
                                 <span class="overflow">Detailing</span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a title="Modification" href="work.html" data-dsn-text="Modification">
+                            <a title="Modification" href="/accessories/modification" data-dsn-text="Modification">
                                 <span class="overflow">Modification</span>
                             </a>
                         </li>
@@ -60,13 +61,13 @@
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a title="Blog" href="blog.html">
+                    <a title="Blog" href="/blog">
                         <span class="overflow">Blog</span>
                     </a>
                 </li>
                 
                 <li class="nav-item ">
-                    <a title="Contact" href="contact.html">
+                    <a title="Contact" href="/contact">
                         <span class="overflow">Contact</span>
                     </a>
                 </li>
@@ -130,37 +131,3 @@
 
     </header>
     <!-- ========== End Menu ========== -->
-
-    <!-- ========== Header ========== -->
-    <header id="dsn_header" class="dsn-header-animation dsn-container section-padding v-dark-head">
-        <div class="entry-header p-relative over-hidden">
-            <div id="hero_image" class="p-absolute dsn-hero-parallax-img over-hidden" data-dsn-ajax="img"
-                 data-overlay="1">
-                <img src="assets/img/bg.jpg" class="cover-bg-img transform-3d" alt=""/>
-            </div>
-
-            <div id="hero_content" class="d-flex p-relative h-100 dsn-hero-parallax-title container align-items-center">
-                <div class="content p-relative ">
-                    <div class="intro-project w-100">
-                        <div class="intro-title ">
-                            <div id="hero_title">
-                                <h1 class="title title-xxl" data-dsn-ajax="title">
-                                    <strong class="theme-color">CR<b>E</b>ATIVE</strong>
-                                    AG<b>A<b>NCY</b></b>
-                                </h1>
-                            </div>
-                            <p class="subtitle-meta metas p-relative mt-30 max-w470 fw-bold">
-                                We’ve taken care of all the digital boring details, so you can take care of your online
-                                business grow and clients satisfaction.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="#page_wrapper" rel="nofollow" class="dsn-scroll-bottom"
-           data-dsn-option='{"ease": "power4.inOut" , "duration" : 1.5}'>
-            <div class="text">SCROLL</div>
-        </a>
-    </header>
-    <!-- ========== End Header ========== -->

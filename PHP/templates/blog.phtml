@@ -6,13 +6,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="assets/img/logo-32x32.png" sizes="32x32"/>
-    <link rel="icon" href="assets/img/logo-192x192.png" sizes="192x192"/>
+    <link rel="icon" href="/assets/img/logo-32x32.png" sizes="32x32"/>
+    <link rel="icon" href="/assets/img/logo-192x192.png" sizes="192x192"/>
 
     <title>Stories | Indian Detailing Garage</title>
 
-    <link href="assets/css/plugins.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="/assets/css/plugins.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 
@@ -24,26 +24,26 @@
     <div class="dsnload p-absolute">
         <span class="dsnload__row">
             <span class="dsnload__img">
-            <img src="assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
-            <img src="assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+            <img src="/assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+            <img src="/assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
             </span>
         </span>
         <span class="dsnload__row dsnload__row--sibling">
             <span class="dsnload__img">
-                 <img src="assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
-            <img src="assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+                 <img src="/assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+            <img src="/assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
             </span>
         </span>
         <span class="dsnload__row dsnload__row--sibling">
             <span class="dsnload__img">
-                <img src="assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
-            <img src="assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+                <img src="/assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+            <img src="/assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
             </span>
         </span>
         <span class="dsnload__row dsnload__row--sibling">
             <span class="dsnload__img">
-               <img src="assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
-            <img src="assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+               <img src="/assets/img/logo-light.png" class="logo-dark" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
+            <img src="/assets/img/logo.png" class="logo-light" alt="IndianDetailingGarage" decoding="async" loading="lazy"/>
             </span>
         </span>
 
@@ -77,133 +77,102 @@
 
 <?php include('common/header.php'); ?>
 
+    <!-- ========== Header Normal========== -->
+    <header id="dsn_header" class="dsn-header-animation  header-normal ">
+        <div class="entry-header p-relative over-hidden">
+
+            <div id="hero_content" class="d-flex p-relative h-100 dsn-hero-parallax-title container">
+                <div class="content p-relative ">
+                    <div class="intro-project w-100">
+                        <div class="intro-title ">
+                            <div id="hero_title">
+                                <h1 class="title title-org" data-dsn-ajax="title">Our Stories</h1>
+                            </div>
+                            <p class="subtitle-meta metas p-relative mt-10">NEWS & IDEAS</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <a href="#page_wrapper" rel="nofollow" class="dsn-scroll-bottom"
+           data-dsn-option='{"ease": "power4.inOut" , "duration" : 1.5}'>
+            <div class="text">SCROLL</div>
+        </a>
+
+    </header>
+    <!-- ========== End Header Normal ========== -->
+
     <div id="page_wrapper" class="wrapper">
 
         <!-- ========== Stories ========== -->
         <div class="root-blog container section-margin  dsn-blog">
+            <?php
+            foreach ($blogs as $blog) {
+            ?>
             <article class="blog-item p-relative pt-50 pb-50 border-bottom">
                 <div class="blog-item-inner p-relative">
                     <div class="left-box">
-                        <a href="single.html" class="effect-ajax word-wrap" rel="bookmark">
-                            <h4 class="title-block">Wildlife could be amazing, see why. </h4>
+                        <a href="/blog/<?= $blog['slug'] ?>" class="effect-ajax word-wrap" rel="bookmark">
+                            <h4 class="title-block"><?= $blog['title'] ?></h4>
                         </a>
 
                         <div class="link mt-15">
-                            <span class="font-caps heading-color"> June 12, 2022 </span>
+                            <span class="font-caps heading-color"> <?= date('F d, Y', intval($blog['created'])) ?> </span>
                         </div>
                     </div>
                     <div class="right-box">
                         <p class="max-w570">
-                            qProin faucibus nec mauris a sodales, sed elementum mi tincidunt. Sed eget viverra
-                            egestas
+                            <?= $blog['shortdescription'] ?>
                         </p>
-                        <div class="metas has-separates fz-14 blog-category mt-5">
+                        <!-- <div class="metas has-separates fz-14 blog-category mt-5">
                             <span class="mt-10">Uncategorized</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </article>
-            <article class="blog-item p-relative pt-50 pb-50 border-bottom">
-                <div class="blog-item-inner p-relative">
-                    <div class="left-box">
-                        <a href="single.html" class="effect-ajax word-wrap" rel="bookmark">
-                            <h4 class="title-block">Quick tips for an effective styled wedding. </h4>
-                        </a>
-
-                        <div class="link mt-15">
-                            <span class="font-caps heading-color"> Oct 12, 2022 </span>
-                        </div>
-                    </div>
-                    <div class="right-box">
-                        <p class="max-w570">
-                            qProin faucibus nec mauris a sodales, sed elementum mi tincidunt. Sed eget viverra
-                            egestas
-                        </p>
-                        <div class="metas has-separates fz-14 blog-category mt-5">
-                            <span class="mt-10">Editorial</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="blog-item p-relative pt-50 pb-50 border-bottom">
-                <div class="blog-item-inner p-relative">
-                    <div class="left-box">
-                        <a href="single.html" class="effect-ajax word-wrap" rel="bookmark">
-                            <h4 class="title-block">Soul Artwork from Lizzy </h4>
-                        </a>
-
-                        <div class="link mt-15">
-                            <span class="font-caps heading-color"> June 12, 2022 </span>
-                        </div>
-                    </div>
-                    <div class="right-box">
-                        <p class="max-w570">
-                            qProin faucibus nec mauris a sodales, sed elementum mi tincidunt. Sed eget viverra
-                            egestas
-                        </p>
-                        <div class="metas has-separates fz-14 blog-category mt-5">
-                            <span class="mt-10">Uncategorized</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="blog-item p-relative pt-50 pb-50 border-bottom">
-                <div class="blog-item-inner p-relative">
-                    <div class="left-box">
-                        <a href="single.html" class="effect-ajax word-wrap" rel="bookmark">
-                            <h4 class="title-block">Wildlife could be amazing, see why. </h4>
-                        </a>
-
-                        <div class="link mt-15">
-                            <span class="font-caps heading-color"> June 12, 2022 </span>
-                        </div>
-                    </div>
-                    <div class="right-box">
-                        <p class="max-w570">
-                            qProin faucibus nec mauris a sodales, sed elementum mi tincidunt. Sed eget viverra
-                            egestas
-                        </p>
-                        <div class="metas has-separates fz-14 blog-category mt-5">
-                            <span class="mt-10">Editorial</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="blog-item p-relative pt-50 pb-50 border-bottom">
-                <div class="blog-item-inner p-relative">
-                    <div class="left-box">
-                        <a href="single.html" class="effect-ajax word-wrap" rel="bookmark">
-                            <h4 class="title-block">Create the bestworkplace </h4>
-                        </a>
-
-                        <div class="link mt-15">
-                            <span class="font-caps heading-color"> June 12, 2022 </span>
-                        </div>
-                    </div>
-                    <div class="right-box">
-                        <p class="max-w570">
-                            qProin faucibus nec mauris a sodales, sed elementum mi tincidunt. Sed eget viverra
-                            egestas
-                        </p>
-                        <div class="metas has-separates fz-14 blog-category mt-5">
-                            <span class="mt-10">Uncategorized</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
+            <?php
+            }
+            ?>
             <div class="type-p-nav">
                 <div class="dsn-pagination  p-relative d-flex align-items-center">
+                    <?php
+                    $pagi = 1;
+                    $postCount2 = $postCount;
+                    do {
+                        if($page == $pagi) {
+                    ?>
                     <span aria-current="page" class="page-numbers current">
                         <span class="dsn-numbers dsn-heading-title title-tag">
-                            <span class="number">1</span>
+                            <span class="number"><?= $pagi ?></span>
                         </span>
                     </span>
-                    <a class="page-numbers" href="#0">
+                    <?php
+                        } else {
+                    ?>
+                    <a class="page-numbers" href="/blog?page=<?= $pagi ?>">
                         <span class="dsn-numbers dsn-heading-title title-tag">
-                            <span class="number">2</span>
+                            <span class="number"><?= $pagi ?></span>
                         </span>
                     </a>
-                    <a class="next page-numbers" href="#0">
+                    <?php
+                        }
+                        $postCount2 = $postCount2 - 10;
+                        $pagi = $pagi + 1;
+                    } while ($postCount2 > 0);
+                    ?>
+                    
+                    
+                    <a class="next page-numbers" href="<?php
+                    $remaining = $postCount - ( $page * 10 );
+                    echo $remaining > 0 ? "/blog?page=" . ($page + 1) : "#";
+                    ?>">
                         <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
                              fill="#fff">
                             <path d="M3 26.7h39.5v3.5c0 .3.1.5.4.6.2.1.5.1.7-.1l5.9-4.2c.2-.1.3-.3.3-.5s-.1-.4-.3-.5l-5.9-4.2c-.1-.1-.3-.1-.4-.1-.1 0-.2 0-.3.1-.2.1-.4.3-.4.6v3.5H3c-.4 0-.7.3-.7.7 0 .3.3.6.7.6z"></path>
@@ -236,10 +205,10 @@
 <div id="line_head"><span class="container"></span></div>
 <!-- ========== End Line BG ========== -->
 
-<script src="assets/js/jquery-3.1.1.min.js"></script>
-<script src="assets/js/plugins.min.js"></script>
-<script src="assets/js/plugins/dsn-grid.min.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="/assets/js/jquery-3.1.1.min.js"></script>
+<script src="/assets/js/plugins.min.js"></script>
+<script src="/assets/js/plugins/dsn-grid.min.js"></script>
+<script src="/assets/js/custom.js"></script>
 
 </body>
 

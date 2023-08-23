@@ -6555,4 +6555,65 @@ body.tax-product_tag #dsn_header, body.tax-product_cat #dsn_header {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.background-animated-gifed {
+  transition: background 1s;
+}
+.background-animated-gifed:hover {
+  background-image: url(../img/animated-hex-dark.gif) !important;
+  background-size: cover;
+}
+
+@keyframes bloxani {
+  0% {
+    border-width: 1px;
+    width: 0;
+    height: 0;
+    left: -1px;
+    top: -1px;
+  }
+  12.5% {
+    border-width: 2px;
+    width: 50%;
+  }
+  25% {
+    border-width: 1px;
+    width: 0;
+    height: 0;
+    left: calc(100% - 1px);
+    top: -1px;
+  }
+  37.5% {
+    border-width: 2px;
+    height: 50%;
+  }
+  50% {
+    border-width: 1px;
+    width: 0;
+    height: 0;
+    left: calc(100% - 1px);
+    top: calc(100% - 1px);
+  }
+  62.5% {
+    border-width: 2px;
+    width: 50%;
+  }
+  75% {
+    border-width: 1px;
+    width: 0;
+    height: 0;
+    left: -1px;
+    top: calc(100% - 1px);
+  }
+  87.5% {
+    border-width: 2px;
+    height: 50%;
+  }
+  100% {
+    border-width: 1px;
+    width: 0;
+    height: 0;
+    left: -1px;
+    top: -1px;
+  }
+}

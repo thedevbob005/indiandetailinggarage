@@ -398,25 +398,14 @@ nc.formWidget = function (obj) {
 }
 
 $.fn.serializeObject = function() {
-	var o = {};
-	var a = this.serializeArray();
-	$.each(a, function() {
-		
-		// Field labels
-		var field_label = $('[name='+this.name+']').attr('data-label') ? $('[name='+this.name+']').attr('data-label') : this.name;
+	var unindexed_array = this.serializeArray();
+    var indexed_array = {};
 
-		// Field values
-		if (o[this.name]) {
-			if (!o[this.name].push) {
-				o[this.name] = [o[this.name]];
-			}
-			o[this.name].push({val: this.value, label: field_label} || '');
-		} else {
-			//o[this.name] = this.value || '';
-			o[this.name] = {val: this.value, label: field_label} || '';
-		}
-	});
-	return o;
+    $.map(unindexed_array, function(n, i){
+        indexed_array[n['name']] = n['value'];
+    });
+
+    return indexed_array;
 };
 
 nc.common = function() {
